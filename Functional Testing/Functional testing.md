@@ -255,3 +255,264 @@ Verify the complete user journey.
 - UAT → Client Validation
 - API → Backend Testing
 - E2E → Complete User Flow
+
+# 🧪 Functional Testing Types (Java Examples)
+
+Functional Testing checks whether the software features work as expected.
+
+---
+
+## 1. Unit Testing
+
+### What is it?
+
+Testing a single method or function.
+
+### Java Example
+
+```java
+public int add(int a, int b) {
+    return a + b;
+}
+```
+
+Test:
+
+```java
+add(2, 3);
+```
+
+Expected Output:
+
+```java
+5
+```
+
+### Purpose
+
+Verify that an individual method works correctly.
+
+![Unit Testing](https://github.com/user-attachments/assets/f7af8a26-e81e-43e1-95f4-750a97061bda)
+
+---
+
+## 2. Integration Testing
+
+### What is it?
+
+Testing how multiple classes/modules work together.
+
+### Java Example
+
+```text
+UserService → DatabaseService
+```
+
+Scenario:
+
+- User logs in.
+- UserService checks credentials.
+- DatabaseService fetches data.
+
+### Purpose
+
+Verify communication between modules.
+
+![Integration Testing](https://github.com/user-attachments/assets/5d7bbe03-219a-468b-b3d8-56a2d906e7f0)
+
+---
+
+## 3. System Testing
+
+### What is it?
+
+Testing the complete application.
+
+### Java Example
+
+Banking Application:
+
+1. Register User
+2. Login
+3. Transfer Money
+4. View Transaction History
+
+### Purpose
+
+Verify the entire system works correctly.
+
+![System Testing](https://github.com/user-attachments/assets/1ac7ab2a-b159-48a1-861f-0b6dcc9b6742)
+
+---
+
+## 4. Smoke Testing
+
+### What is it?
+
+Checking whether the main features work after a new build.
+
+### Example
+
+- Application starts
+- Login page opens
+- Database connection works
+
+### Purpose
+
+Ensure the build is stable.
+
+![Smoke Testing](https://github.com/user-attachments/assets/095a4eb2-4685-40d7-bd86-cd7fbb15e9c9)
+
+---
+
+## 5. Sanity Testing
+
+### What is it?
+
+Testing a specific functionality after a bug fix.
+
+### Java Example
+
+Bug Fixed:
+
+```java
+Forgot Password Feature
+```
+
+Test only:
+
+```java
+Forgot Password Module
+```
+
+### Purpose
+
+Confirm the bug fix works correctly.
+
+![Sanity Testing](https://github.com/user-attachments/assets/8a2d53c2-12fe-4c56-87ee-f64f90ffc968)
+
+---
+
+## 6. Regression Testing
+
+### What is it?
+
+Testing existing features after adding new code.
+
+### Java Example
+
+New Feature Added:
+
+```java
+UPI Payment
+```
+
+Retest:
+
+- Login
+- Account Balance
+- Money Transfer
+
+### Purpose
+
+Ensure old features still work.
+
+![Regression Testing](https://github.com/user-attachments/assets/e9ceef38-21c1-47e1-be3b-ba6d8788a5e1)
+
+---
+
+## 7. User Acceptance Testing (UAT)
+
+### What is it?
+
+Testing by clients or end users.
+
+### Example
+
+Client verifies:
+
+- Account creation
+- Fund transfer
+- Statement generation
+
+### Purpose
+
+Ensure business requirements are met.
+
+![User Acceptance Testing](https://github.com/user-attachments/assets/773ffeb4-f207-47aa-a8a3-cc57079c3948)
+
+---
+
+## 8. API Testing
+
+### What is it?
+
+Testing backend APIs without the UI.
+
+### API
+
+```http
+POST /login
+```
+
+Request:
+
+```json
+{
+  "username": "admin",
+  "password": "123"
+}
+```
+
+Response:
+
+```json
+{
+  "status": "success"
+}
+```
+
+### Purpose
+
+Verify API functionality.
+
+![API Testing](https://github.com/user-attachments/assets/eedc58fa-d348-4c69-9856-a9cf8a368fb1)
+
+---
+
+## 9. End-to-End (E2E) Testing
+
+### What is it?
+
+Testing a complete user workflow.
+
+### Example
+
+1. Register
+2. Login
+3. Search Product
+4. Add to Cart
+5. Make Payment
+6. Place Order
+
+### Purpose
+
+Verify the complete user journey.
+
+![End-to-End Testing](https://github.com/user-attachments/assets/d165728c-0d02-4c20-a30d-579ea1b7826f)
+
+---
+
+# Quick Interview Answer
+
+| Testing Type | Purpose |
+|--------------|---------|
+| Unit Testing | Single Method |
+| Integration Testing | Multiple Modules |
+| System Testing | Entire Application |
+| Smoke Testing | Basic Build Check |
+| Sanity Testing | Check Bug Fix |
+| Regression Testing | Ensure Old Features Work |
+| User Acceptance Testing | Client Validation |
+| API Testing | Backend Testing |
+| End-to-End Testing | Complete User Flow |
