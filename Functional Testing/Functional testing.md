@@ -7,7 +7,7 @@ Functional Testing checks whether the software features work as expected.
 ---
 
 ## 1. Unit Testing
-<img width="320" height="180" alt="image" src="https://github.com/user-attachments/assets/e2d7a405-129f-48bc-adce-b5860f53adab" />
+<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/f7af8a26-e81e-43e1-95f4-750a97061bda" />
 
 ### What is it?
 Testing a single method or function.
