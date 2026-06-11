@@ -7,7 +7,7 @@ Functional Testing checks whether the software features work as expected.
 ---
 
 ## 1. Unit Testing
-<img width="640" height="480" alt="image" src="https://github.com/user-attachments/assets/f7af8a26-e81e-43e1-95f4-750a97061bda" />
+<img width="1474" height="480" alt="image" src="https://github.com/user-attachments/assets/f7af8a26-e81e-43e1-95f4-750a97061bda" />
 
 ### What is it?
 Testing a single method or function.
@@ -40,7 +40,7 @@ Verify that an individual method works correctly.
 
 
 ## 2. Integration Testing
-<img width="1000" height="410" alt="image" src="https://github.com/user-attachments/assets/5d7bbe03-219a-468b-b3d8-56a2d906e7f0" />
+<img width="1474" height="410" alt="image" src="https://github.com/user-attachments/assets/5d7bbe03-219a-468b-b3d8-56a2d906e7f0" />
 
 ### What is it?
 Testing how multiple classes/modules work together.
@@ -84,7 +84,7 @@ Verify the entire system works correctly.
 
 ## 4. Smoke Testing
 
-<img width="1187" height="428" alt="image" src="https://github.com/user-attachments/assets/095a4eb2-4685-40d7-bd86-cd7fbb15e9c9" />
+<img width="1474" height="428" alt="image" src="https://github.com/user-attachments/assets/095a4eb2-4685-40d7-bd86-cd7fbb15e9c9" />
 
 ### What is it?
 Checking whether the main features work after a new build.
@@ -104,7 +104,7 @@ Ensure the build is stable.
 
 ## 5. Sanity Testing
 
-<img width="1600" height="956" alt="image" src="https://github.com/user-attachments/assets/8a2d53c2-12fe-4c56-87ee-f64f90ffc968" />
+<img width="1474" height="956" alt="image" src="https://github.com/user-attachments/assets/8a2d53c2-12fe-4c56-87ee-f64f90ffc968" />
 
 ### What is it?
 Testing a specific functionality after a bug fix.
@@ -129,7 +129,7 @@ Confirm the bug fix works correctly.
 ---
 
 ## 6. Regression Testing
-<img width="860" height="503" alt="image" src="https://github.com/user-attachments/assets/e9ceef38-21c1-47e1-be3b-ba6d8788a5e1" />
+<img width="1474" height="503" alt="image" src="https://github.com/user-attachments/assets/e9ceef38-21c1-47e1-be3b-ba6d8788a5e1" />
 
 ### What is it?
 Testing existing features after adding new code.
@@ -154,7 +154,7 @@ Ensure old features still work.
 ---
 
 ## 7. User Acceptance Testing (UAT)
-<img width="1344" height="756" alt="image" src="https://github.com/user-attachments/assets/773ffeb4-f207-47aa-a8a3-cc57079c3948" />
+<img width="1474" height="756" alt="image" src="https://github.com/user-attachments/assets/773ffeb4-f207-47aa-a8a3-cc57079c3948" />
 
 ### What is it?
 Testing by clients or end users.
@@ -173,7 +173,7 @@ Ensure business requirements are met.
 ---
 
 ## 8. API Testing
-<img width="740" height="389" alt="image" src="https://github.com/user-attachments/assets/eedc58fa-d348-4c69-9856-a9cf8a368fb1" />
+<img width="1474" height="389" alt="image" src="https://github.com/user-attachments/assets/eedc58fa-d348-4c69-9856-a9cf8a368fb1" />
 
 ### What is it?
 Testing backend APIs without the UI.
@@ -209,7 +209,7 @@ Verify API functionality.
 ---
 
 ## 9. End-to-End (E2E) Testing
-<img width="640" height="372" alt="image" src="https://github.com/user-attachments/assets/d165728c-0d02-4c20-a30d-579ea1b7826f" />
+<img width="1474" height="372" alt="image" src="https://github.com/user-attachments/assets/d165728c-0d02-4c20-a30d-579ea1b7826f" />
 
 ### What is it?
 Testing a complete user workflow.
