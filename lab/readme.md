@@ -1,3 +1,46 @@
+```python
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class hi {
+    public static void main(String[] args) {
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://demoqa.com/automation-practice-form");
+
+        WebElement firstNameTxt = driver.findElement(By.id("firstName"));
+        firstNameTxt.sendKeys("Mounesh");
+
+        WebElement lastNameTxt = driver.findElement(By.id("lastName"));
+        lastNameTxt.sendKeys("Patil");
+
+        WebElement emailTxt = driver.findElement(By.id("userEmail"));
+        emailTxt.sendKeys("hi@gmail.com");
+
+        WebElement maleRadioBtn = driver.findElement(By.xpath("//label[text()='Male']"));
+        maleRadioBtn.click();
+
+        WebElement mobileNumberTxt = driver.findElement(By.id("userNumber"));
+        mobileNumberTxt.sendKeys("1234567890");
+
+        WebElement sportsCheckbox = driver.findElement(By.xpath("//label[text()='Sports']"));
+        sportsCheckbox.click();
+
+        WebElement uploadPictureBtn = driver.findElement(By.id("uploadPicture"));
+        uploadPictureBtn.sendKeys(
+                "C:\\Users\\gurup\\Downloads\\WhatsApp Image 2026-06-15 at 8.59.21 AM.jpeg");
+
+        WebElement currentAddressTxt = driver.findElement(By.id("currentAddress"));
+        currentAddressTxt.sendKeys("Bangalore, Karnataka");
+
+    }
+}
+```
+
+
 # Selenium Automation: Understanding Similar Questions
 
 ## Question 1
@@ -46,44 +89,5 @@ The second question is a subset of the first because **form elements are themsel
 
 Therefore, a Selenium script that handles form elements also interacts with web elements.
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-public class hi {
-    public static void main(String[] args) {
-
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://demoqa.com/automation-practice-form");
-
-        WebElement firstNameTxt = driver.findElement(By.id("firstName"));
-        firstNameTxt.sendKeys("Mounesh");
-
-        WebElement lastNameTxt = driver.findElement(By.id("lastName"));
-        lastNameTxt.sendKeys("Patil");
-
-        WebElement emailTxt = driver.findElement(By.id("userEmail"));
-        emailTxt.sendKeys("hi@gmail.com");
-
-        WebElement maleRadioBtn = driver.findElement(By.xpath("//label[text()='Male']"));
-        maleRadioBtn.click();
-
-        WebElement mobileNumberTxt = driver.findElement(By.id("userNumber"));
-        mobileNumberTxt.sendKeys("1234567890");
-
-        WebElement sportsCheckbox = driver.findElement(By.xpath("//label[text()='Sports']"));
-        sportsCheckbox.click();
-
-        WebElement uploadPictureBtn = driver.findElement(By.id("uploadPicture"));
-        uploadPictureBtn.sendKeys(
-                "C:\\Users\\gurup\\Downloads\\WhatsApp Image 2026-06-15 at 8.59.21 AM.jpeg");
-
-        WebElement currentAddressTxt = driver.findElement(By.id("currentAddress"));
-        currentAddressTxt.sendKeys("Bangalore, Karnataka");
-
-    }
-}
 
 ---
