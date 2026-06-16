@@ -1,4 +1,36 @@
 ```python
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class hi {
+    public static void main (String[] args) {
+        WebDriver driver=new ChromeDriver();
+        driver.get("https://demoqa.com/automation-practice-form");
+
+        driver.findElement(By.id("firstName")).sendKeys("Mounesh");
+        driver.findElement(By.id("lastName")).sendKeys("patil");
+        driver.findElement(By.id("userEmail")).sendKeys("hi@gmail.com");
+        driver.findElement(By.xpath("//label[text()='Male']")).click();
+        driver.findElement(By.id("userNumber")).sendKeys("1234567890");
+        driver.findElement(By.xpath("//label[text()='Sports']")).click();
+        driver.findElement(By.id("uploadPicture")).sendKeys("C:\\Users\\gurup\\Downloads\\WhatsApp Image 2026-06-15 at 8.59.21 AM.jpeg");
+        driver.findElement(By.id("currentAddress")).sendKeys("banglure,Karnatak");
+        driver.findElement(By.tagName("body")).sendKeys(Keys.END);
+        driver.findElement(By.id("submit")).sendKeys(Keys.ENTER);
+
+
+    }
+}
+
+```
+
+
+
+
+```python
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
