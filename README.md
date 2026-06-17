@@ -212,4 +212,46 @@ public class hi {
 ```
 
 
+```python
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+
+public class hi {
+
+    public static void main(String[] args) throws Exception {
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("https://www.google.com");
+
+        // Take screenshot
+        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        // Save file
+        FileUtils.copyFile(src, new File("C:\\Screenshots\\google.png"));
+
+        System.out.println("Screenshot taken");
+
+        driver.quit();
+    }
+}
+
+
+```
+
+
+```python
+
+ <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+```
+
 
