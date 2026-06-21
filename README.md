@@ -1,3 +1,9 @@
+# saucedemo
+https://www.saucedemo.com/
+
+# Calendera
+https://demoqa.com/date-picker
+
 # 2 And 3 Lab
 
 https://demoqa.com/automation-practice-form
