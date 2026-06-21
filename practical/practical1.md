@@ -54,6 +54,7 @@ public class dd {
             <version>4.22.0</version>
         </dependency>
     </dependencies>
+</project>
 
 
 
@@ -88,9 +89,6 @@ public class DatePickerSimple {
         driver.quit();
     }
 }
-
-```
-</project>
 
 
 ```
