@@ -206,3 +206,69 @@ public class hi {
     }
 }
 ```
+
+# practical 5
+```
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class hi {
+
+    static Logger log = LogManager.getLogger(hi.class);
+
+    @Test
+    public void loginTest() {
+
+        // INFO
+        log.info("Launching Chrome Browser");
+
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+
+        // INFO
+        log.info("Opening Website");
+        driver.get("https://www.saucedemo.com");
+
+        // DEBUG
+        log.debug("Entering Username");
+        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+
+        // TRACE
+        log.trace("Entering Password");
+        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+
+        // TRACE
+        log.trace("Clicking Login Button");
+        driver.findElement(By.id("login-button")).click();
+
+        Assert.assertTrue(driver.getCurrentUrl().contains("inventory"));
+
+        // WARN
+        log.warn("Hardcoded credentials are used.");
+
+        // ERROR
+        log.error("Demo Error Message.");
+
+        // FATAL
+        log.fatal("Demo Fatal Message.");
+
+        // OFF (disables all further logging)
+        Configurator.setRootLevel(Level.OFF);
+
+        // This message will NOT be printed
+        log.info("This message will not appear.");
+
+        driver.quit();
+
+        // This also will NOT be printed
+        log.info("Browser Closed");
+    }
+}
+```
