@@ -1,4 +1,3 @@
-````markdown
 # Log4j2 Logging Levels
 
 ## Why Do We Need Log4j2?
@@ -81,4 +80,27 @@ OFF (Disables all logging)
 Log4j2 provides a structured and configurable way to log application events. By using different logging levels, developers and testers can easily monitor application behavior, debug issues, identify failures, and maintain applications more efficiently.
 
 ```
+```
+```python
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Appenders>
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{HH:mm:ss} %-5level %msg%n"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+
+        <Root level="trace">
+            <AppenderRef ref="Console"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>
 ```
