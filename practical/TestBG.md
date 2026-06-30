@@ -209,66 +209,57 @@ public class hi {
 
 # practical 5
 ```
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
-public class hi {
+public class hello {
 
-    static Logger log = LogManager.getLogger(hi.class);
+    static Logger log = LogManager.getLogger(hello.class);
 
     @Test
-    public void loginTest() {
+    public void game() throws InterruptedException {
 
-        // INFO
-        log.info("Launching Chrome Browser");
-
+        log.info("opening web");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
 
-        // INFO
-        log.info("Opening Website");
-        driver.get("https://www.saucedemo.com");
+        driver.get("https://play2048.co");
 
-        // DEBUG
-        log.debug("Entering Username");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
+        // Wait for page to load
+        Thread.sleep(2000);
 
-        // TRACE
-        log.trace("Entering Password");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        log.debug("starting game interaction");
 
-        // TRACE
-        log.trace("Clicking Login Button");
-        driver.findElement(By.id("login-button")).click();
+        log.trace("moving up");
+        driver.findElement(By.tagName("body")).sendKeys(Keys.ARROW_UP);
+        Thread.sleep(1000);
 
-        Assert.assertTrue(driver.getCurrentUrl().contains("inventory"));
+        log.trace("moving left");
+        driver.findElement(By.tagName("body")).sendKeys(Keys.ARROW_LEFT);
+        Thread.sleep(1000);
 
-        // WARN
-        log.warn("Hardcoded credentials are used.");
+        log.trace("moving right");
+        driver.findElement(By.tagName("body")).sendKeys(Keys.ARROW_RIGHT);
+        Thread.sleep(1000);
 
-        // ERROR
-        log.error("Demo Error Message.");
+        log.trace("moving down");
+        driver.findElement(By.tagName("body")).sendKeys(Keys.ARROW_DOWN);
+        Thread.sleep(1000);
 
-        // FATAL
-        log.fatal("Demo Fatal Message.");
+        log.warn("here is some warning");
+        log.fatal("major issues");
+        log.error("small issues");
 
-        // OFF (disables all further logging)
+        Thread.sleep(3000); // Keep browser open for 3 seconds
+
         Configurator.setRootLevel(Level.OFF);
-
-        // This message will NOT be printed
-        log.info("This message will not appear.");
-
         driver.quit();
-
-        // This also will NOT be printed
-        log.info("Browser Closed");
     }
 }
 ```
