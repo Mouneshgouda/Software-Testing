@@ -208,7 +208,7 @@ public class hi {
 ```
 
 # practical 5
-```
+``` python
 import org.apache.logging.log4j.core.config.Configurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
