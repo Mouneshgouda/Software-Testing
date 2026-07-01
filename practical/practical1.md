@@ -88,6 +88,42 @@ public class DatePickerSimple {
 
         driver.quit();
     }
+
+
+```java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class hi {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+
+        driver.get("https://demoqa.com/buttons");
+        
+
+        Actions actions = new Actions(driver);
+
+        // Double Click
+        actions.doubleClick(driver.findElement(By.id("doubleClickBtn"))).perform();
+        Thread.sleep(2000);
+
+        // Right Click
+        actions.contextClick(driver.findElement(By.id("rightClickBtn"))).perform();
+        Thread.sleep(2000);
+
+        // Normal Click
+        driver.findElement(By.xpath("//button[text()='Click Me']")).click();
+        Thread.sleep(2000);
+        driver.quit();
+    }
+}
+
+```
 }
 
 
