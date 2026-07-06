@@ -4,7 +4,7 @@ https://plastelina.net/cannibals-missionaries-fullscreen/
 
 
 
-# key boed
+#  Mouse
 https://demoqa.com/buttons
 
 # Game
