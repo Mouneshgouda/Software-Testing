@@ -303,12 +303,6 @@ public class hi {
         test.pass("Admin Opened");
         capture(driver, test, "04_Admin");
 
-        // Open User Menu
-        driver.findElement(By.className("oxd-userdropdown-name")).click();
-        Thread.sleep(2000);
-        test.pass("User Menu Opened");
-        capture(driver, test, "05_UserMenu");
-
         // Logout
         driver.findElement(By.linkText("Logout")).click();
         Thread.sleep(3000);
