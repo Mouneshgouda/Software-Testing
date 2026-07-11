@@ -28,6 +28,15 @@ public class hi {
         driver.findElement(By.name("username")).sendKeys("Admin");
         driver.findElement(By.name("password")).sendKeys("admin123");
         driver.findElement(By.cssSelector("button[type='submit']")).click();
+        test.pass("opened Dashbored");
+        Thread.sleep(2000);
+        // capture(driver, test, "02Dashbored");
+
+
+
+
+    }
+}
         
 
     }
