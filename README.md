@@ -2,6 +2,38 @@
 
 https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 
+
+```python
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import com.aventstack.extentreports.*;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+
+public class hi {
+    public static void main(String[] args) throws Exception {
+        new File("6experiment").mkdir();
+        ExtentReports extentReports = new ExtentReports();
+        extentReports.attachReporter(new ExtentSparkReporter("6experiment/mult.html"));
+        ExtentTest test = extentReports.createTest("multiple screen");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        test.pass("web page opened");
+        Thread.sleep(2000);
+//        capture(driver, test, "01login");
+
+        driver.findElement(By.name("username")).sendKeys("Admin");
+        driver.findElement(By.name("password")).sendKeys("admin123");
+        driver.findElement(By.cssSelector("button[type='submit']")).click();
+        
+
+    }
+}
+```
+
 # Problem
 https://plastelina.net/cannibals-missionaries-fullscreen/
 
