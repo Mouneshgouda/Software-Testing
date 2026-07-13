@@ -2,6 +2,38 @@
 
 https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 
+```python
+import com.aventstack.extentreports.*;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+
+public class hi {
+
+    public static void main(String[] args) throws Exception {
+
+        // Create reports folder
+        new File("6Experiment").mkdir();
+
+        // Extent Report
+        ExtentReports extentReports = new ExtentReports();
+        extentReports.attachReporter(new ExtentSparkReporter("6Experiment/multi.html"));
+        ExtentTest test = extentReports.createTest("OrangeHRM Automation Test");
+        WebDriver driver=new ChromeDriver();
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
+
+
+
+    }
+
+
+}
+```
 
     
 
