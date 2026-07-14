@@ -231,12 +231,6 @@ public class ReportedAutomation {
         test.pass("Admin Management Frame Loaded");
         capture(driver, test, "04_Admin");
 
-        // Logout
-        driver.findElement(By.linkText("Logout")).click();
-        Thread.sleep(3000);
-
-        test.pass("User Logout Process Finalized");
-        capture(driver, test, "05_Logout");
 
         driver.quit();
 
