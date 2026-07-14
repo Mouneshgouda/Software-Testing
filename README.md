@@ -1,3 +1,6 @@
+## Alerat
+https://the-internet.herokuapp.com/javascript_alerts
+
 ## Orange page
 
 https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
