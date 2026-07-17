@@ -1,6 +1,38 @@
 ## Drag and drop
 https://demo.automationtesting.in/Dynamic.html
 
+```python
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.sql.Driver;
+import java.util.List;
+import java.time.Duration;
+
+public class hi {
+    public static void main(String[] args) throws Exception{
+        WebDriver driver=new ChromeDriver();
+        driver.manage().window().maximize();
+        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofDays(2));
+        driver.get("https://demo.automationtesting.in/Dynamic.html");
+        List<WebElement> images=wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id("node")));
+//        List<WebElement> images=driver.findElements(By.id("node"));
+        WebElement drop=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("droparea")));
+//        WebElement drop=driver.findElement(By.id("droparea"));
+        Actions act=new Actions(driver);
+        for(WebElement img:images){
+            act.dragAndDrop(img,drop).perform();
+        }
+
+    }
+}
+
+```
+
 ## Webtable 
 https://the-internet.herokuapp.com/tables
 
