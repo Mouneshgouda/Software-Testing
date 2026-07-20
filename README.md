@@ -4,33 +4,6 @@ https://demo.automationtesting.in/Dynamic.html
 ## Webtable 
 https://the-internet.herokuapp.com/tables
 
-```python
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.WebDriver;
-import java.util.List;
-public class webtable {
-    public static void main(String[]args){
-        WebDriver driver=new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://the-internet.herokuapp.com/tables");
-        WebElement table1=driver.findElement(By.id("table1"));
-        List<WebElement> rows=table1.findElements(By.xpath(".//tbody/tr"));
-        for(int i=1;i<=rows.size();i++){
-            List<WebElement>column=table1.findElements(By.xpath(".//tbody/tr["+i+"]/td"));
-            for(int j=1;j<=column.size();j++){
-                String value=driver.findElement(By.xpath(".//tbody/tr["+i+"]/td["+j+"]")).getText();
-                System.out.println(value+"/t");
-            }
-            System.out.println();
-        }
-        driver.quit();
-    }
-}
-
-```
-
 
 ## Alerat
 https://the-internet.herokuapp.com/javascript_alerts
