@@ -1,3 +1,14 @@
+## jdbc connection
+
+```python
+        Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/seleniumcru",
+                "root",
+                "mgpatils");
+
+```
+
+
 ## Drag and drop
 https://demo.automationtesting.in/Dynamic.html
 
