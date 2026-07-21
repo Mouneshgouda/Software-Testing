@@ -46,6 +46,34 @@ public class hello {
 https://the-internet.herokuapp.com/tables
 
 
+```python
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.List;
+
+public class hello {
+    public static void main(String[] args){
+        WebDriver driver =new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/tables");
+        WebElement table1=driver.findElement(By.id("table1"));
+        List<WebElement> rows=table1.findElements(By.xpath(".//tbody/tr"));
+        for(int i=1;i<=rows.size();i++){
+            List<WebElement> columns=table1.findElements(
+                    By.xpath(".//tbody/tr["+i+"]/td"));
+            for(int j=1;j<= columns.size();j++){
+                String value=driver.findElement(
+                        By.xpath(".//tbody/tr["+i+"]/td["+j+"]")).getText();
+                System.out.print(value+"\t");
+            }
+            System.out.println();
+        }
+        driver.quit();
+    }
+}
+
+```
+
 ## Alerat
 https://the-internet.herokuapp.com/javascript_alerts
 
