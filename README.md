@@ -3,8 +3,6 @@ https://demo.automationtesting.in/Dynamic.html
 
 ```python
 
-
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -12,25 +10,31 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
-
-public class dragdrop {
+public class hello {
 
     public static void main(String[] args) {
+
         ChromeDriver driver = new ChromeDriver();
+
         driver.manage().window().maximize();
-        WebDriverWait waits=new WebDriverWait(driver,Duration.ofDays(20));
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         driver.get("https://demo.automationtesting.in/Dynamic.html");
-        List<WebElement> images=waits.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//img")));
-//        List<WebElement> images = driver.findElements(By.xpath("//img"));
+
+        // Get all draggable images
+        List<WebElement> images = driver.findElements(By.xpath("//img"));
+
+        // Get drop area
         WebElement dropArea = driver.findElement(By.id("droparea"));
+
+        // Actions class
         Actions act = new Actions(driver);
+
+        // Drag each image
         for (WebElement image : images) {
+
             act.dragAndDrop(image, dropArea).perform();
         }
+
         driver.quit();
     }
 }
