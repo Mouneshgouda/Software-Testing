@@ -4,93 +4,44 @@ import java.sql.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class hello {
-
+public class Hello {
     public static void main(String[] args) throws Exception {
 
-        // Launch Chrome
         ChromeDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-
-        // Open HTML file
         driver.get("file:///C:/Users/LENOVO/IdeaProjects/simple/reports/report.html");
 
-        // Load PostgreSQL Driver
-        Class.forName("org.postgresql.Driver");
-
-        // PostgreSQL Connection
         Connection con = DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/seleniumcru",
                 "postgres",
-                "your_password"   // Replace with your PostgreSQL password
+                "your_password"
         );
 
-        // ---------------- CREATE ----------------
+        // Create
         driver.findElement(By.id("name")).sendKeys("Guru");
         driver.findElement(By.id("email")).sendKeys("guru@gmail.com");
+        con.createStatement().executeUpdate(
+                "INSERT INTO users(name,email) VALUES('Guru','guru@gmail.com')");
 
-        PreparedStatement ps1 = con.prepareStatement(
-                "INSERT INTO users(name,email) VALUES(?,?)");
-        ps1.setString(1, "Guru");
-        ps1.setString(2, "guru@gmail.com");
-        ps1.executeUpdate();
+        show(con);
 
-        System.out.println("User Added");
-        Thread.sleep(2000);
+        // Update
+        con.createStatement().executeUpdate(
+                "UPDATE users SET name='Guru Updated', email='guru123@gmail.com' WHERE id=1");
 
-        // ---------------- READ ----------------
-        showUsers(con);
+        // Delete
+        con.createStatement().executeUpdate(
+                "DELETE FROM users WHERE id=2");
 
-        // ---------------- UPDATE ----------------
-        driver.findElement(By.id("name")).clear();
-        driver.findElement(By.id("email")).clear();
-
-        driver.findElement(By.id("name")).sendKeys("Guru Updated");
-        driver.findElement(By.id("email")).sendKeys("guru123@gmail.com");
-
-        PreparedStatement ps2 = con.prepareStatement(
-                "UPDATE users SET name=?, email=? WHERE id=?");
-        ps2.setString(1, "Guru Updated");
-        ps2.setString(2, "guru123@gmail.com");
-        ps2.setInt(3, 1);
-        ps2.executeUpdate();
-
-        System.out.println("\nUser Updated");
-        Thread.sleep(2000);
-
-        // ---------------- DELETE ----------------
-        PreparedStatement ps3 = con.prepareStatement(
-                "DELETE FROM users WHERE id=?");
-        ps3.setInt(1, 2);
-        ps3.executeUpdate();
-
-        System.out.println("\nUser Deleted");
-        Thread.sleep(2000);
-
-        // ---------------- READ AGAIN ----------------
-        showUsers(con);
+        show(con);
 
         con.close();
         driver.quit();
     }
 
-    static void showUsers(Connection con) throws Exception {
-
-        Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery("SELECT * FROM users");
-
-        System.out.println("\n------ USERS ------");
-
-        while (rs.next()) {
-            System.out.println(
-                    rs.getInt("id") + "  " +
-                    rs.getString("name") + "  " +
-                    rs.getString("email")
-            );
-        }
-
-        rs.close();
-        st.close();
+    static void show(Connection con) throws Exception {
+        ResultSet rs = con.createStatement().executeQuery("SELECT * FROM users");
+        while (rs.next())
+            System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
     }
 }
 
