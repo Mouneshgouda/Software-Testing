@@ -1,4 +1,5 @@
-## jdbc connection
+## jdbc connection mysql
+
 
 ```html
 
@@ -28,6 +29,40 @@ Email:
 
 ```
 
+
+## jdbc for postgres
+
+```python
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple CRUD</title>
+</head>
+
+<body>
+
+<h2>User Form</h2>
+
+<label>Name:</label>
+<input type="text" id="name">
+
+<br><br>
+
+<label>Email:</label>
+<input type="text" id="email">
+
+<br><br>
+
+<button id="add">Add</button>
+<button id="update">Update</button>
+<button id="delete">Delete</button>
+<button id="read">Read</button>
+
+</body>
+</html>
+```
 
 
 ```python
