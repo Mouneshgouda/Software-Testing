@@ -2,9 +2,9 @@
 
 ```python
         Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/seleniumcru",
-                "root",
-                "mgpatils");
+                "jdbc:mysql://localhost:3306/databasename",
+                "username",
+                "password");
 
 ```
 
