@@ -634,3 +634,12 @@ Or simply remember:
 - **Q** = Quit Browser
 
 ```
+
+```python
+     <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.3.0</version>
+        </dependency>
+
+```
