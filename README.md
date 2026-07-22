@@ -32,42 +32,16 @@ Email:
 
 
 ```
+# MySQL Root Password Update
 
+Use the following SQL commands to change the password for the MySQL `root` user.
 
-## jdbc for postgres
+## For MySQL 8.0+
 
-```python
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Simple CRUD</title>
-</head>
-
-<body>
-
-<h2>User Form</h2>
-
-<label>Name:</label>
-<input type="text" id="name">
-
-<br><br>
-
-<label>Email:</label>
-<input type="text" id="email">
-
-<br><br>
-
-<button id="add">Add</button>
-<button id="update">Update</button>
-<button id="delete">Delete</button>
-<button id="read">Read</button>
-
-</body>
-</html>
+```sql
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'newpassword';
+FLUSH PRIVILEGES;
 ```
-
 
 ```python
         Connection con = DriverManager.getConnection(
