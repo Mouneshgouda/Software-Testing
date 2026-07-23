@@ -1,4 +1,34 @@
 ```python
+import java.sql.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class crud {
+    public static void main(String[] args) throws Exception{
+        ChromeDriver driver=new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("C:\\Users\\gurup\\IdeaProjects\\untitled2\\src\\main\\java\\crud.html");
+        //connection bet this log mysql
+        Connection con=DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/selcurd",
+                "root",
+                "yorpassword"
+        );
+        driver.findElement(By.id("name")).sendKeys("mounesh");
+        driver.findElement(By.id("email")).sendKeys("@gmail");
+        con.prepareStatement(
+                "insert into curd(name,eamil) values ('mounesh','@gmail')").executeUpdate();
+        System.out.println("creadted");
+        driver.quit();
+
+
+
+
+    }
+}
+```
+
+```python
 
 CREATE DATABASE seleniumcru;
 
