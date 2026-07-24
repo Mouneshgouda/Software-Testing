@@ -1,17 +1,183 @@
-# Hybrid Framework in Selenium
+# Selenium Framework Types (POM, Data-Driven, Keyword-Driven & Hybrid)
 
-A **Hybrid Framework** in Selenium is an automation design pattern that **combines two or more testing approaches**—most commonly:
+## Introduction
 
-* **Data-Driven Framework:** Keeps test data (like usernames, passwords, and URLs) in external files (Excel, CSV, JSON).
-* **Keyword-Driven Framework:** Uses simple keywords (like `CLICK`, `TYPE`, `OPEN_BROWSER`) to represent actions.
-* **Page Object Model (POM):** Stores web element addresses (XPath, ID, CSS Selectors) in central object repository classes.
+When learning Selenium, you'll often hear about these framework types:
 
-By combining these approaches, the framework completely separates **Test Logic**, **Test Data**, **Element Locators**, and **Action Keywords**.
+- **Page Object Model (POM)**
+- **Data-Driven Framework**
+- **Keyword-Driven Framework**
+- **Hybrid Framework**
+
+These are **not different Selenium tools**. They are simply different ways of organizing your automation project so it is easier to maintain.
 
 ---
-## 🌟 Key Benefits
 
-* **Easy Maintenance:** UI locator changes are updated in **one central place**, preventing changes across multiple test scripts.
-* **High Reusability:** Core action methods are written once and reused across hundreds of test cases.
-* **Non-Coder Accessible:** Manual testers can build test scenarios by specifying keywords and data in Excel.
-* **Rich Reporting:** Provides detailed execution reports with status traces and automatic failure screenshots.
+# 1. Page Object Model (POM)
+
+## Purpose
+
+POM keeps all **web element locators and page actions** in one class.
+
+Instead of writing Selenium code in every test, we create a page class.
+
+---
+
+## Without POM
+
+Every test repeats the same code.
+
+```java
+driver.findElement(By.id("username")).sendKeys("admin");
+driver.findElement(By.id("password")).sendKeys("1234");
+driver.findElement(By.id("login")).click();
+```
+
+Imagine you have **50 tests** using the Login page.
+
+If
+
+```java
+By.id("username")
+```
+
+changes to
+
+```java
+By.name("user")
+```
+
+you must update all 50 tests.
+
+---
+
+## With POM
+
+### LoginPage.java
+
+```java
+public class LoginPage {
+
+    WebDriver driver;
+
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void login(String username, String password) {
+
+        driver.findElement(By.id("username"))
+              .sendKeys(username);
+
+        driver.findElement(By.id("password"))
+              .sendKeys(password);
+
+        driver.findElement(By.id("login"))
+              .click();
+    }
+}
+```
+
+### Test Class
+
+```java
+LoginPage page = new LoginPage(driver);
+
+page.login("admin", "1234");
+```
+
+Now if the locator changes, you only update **LoginPage.java**.
+
+### Summary
+
+✅ POM stores:
+
+- Web element locators
+- Page actions
+
+---
+
+# 2. Data-Driven Framework
+
+## Purpose
+
+Data-Driven Framework keeps **test data outside Java code**.
+
+Examples:
+
+- Excel
+- CSV
+- JSON
+- Properties file
+
+---
+
+## Without Data-Driven
+
+```java
+page.login("admin","1234");
+
+page.login("john","abcd");
+
+page.login("alice","xyz");
+```
+
+Every time new test data is needed, Java code must change.
+
+---
+
+## With Data-Driven
+
+### Excel
+
+| Username | Password |
+|-----------|----------|
+| admin | 1234 |
+| john | abcd |
+| alice | xyz |
+
+Java simply reads one row at a time.
+
+```java
+page.login(username, password);
+```
+
+Tomorrow someone adds
+
+| Username | Password |
+|-----------|----------|
+| manager | test123 |
+
+No Java code changes.
+
+Only Excel changes.
+
+### Summary
+
+✅ Data-Driven stores:
+
+- Username
+- Password
+- URL
+- Search text
+- Expected values
+
+outside the Java code.
+
+---
+
+# 3. Keyword-Driven Framework
+
+## Purpose
+
+Instead of writing Java code, we write simple **keywords**.
+
+Examples:
+
+- OPEN_BROWSER
+- OPEN_URL
+- CLICK
+- TYPE
+- VERIFY
+
+---
