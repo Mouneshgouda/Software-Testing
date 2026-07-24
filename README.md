@@ -1,3 +1,7 @@
+## wikipedia
+https://www.wikipedia.org
+
+
 ## Mysql Install
 
 https://medium.com/@mouneshpatil001/git-integration-with-pycharm-ide-7c40b71a8166?source=user_profile_page---------21-------------c0a81552e44e----------------------
