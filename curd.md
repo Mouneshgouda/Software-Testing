@@ -1,4 +1,5 @@
 ```python
+
 import java.sql.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,11 +20,29 @@ public class crud {
         con.prepareStatement(
                 "insert into curd(name,eamil) values ('mounesh','@gmail')").executeUpdate();
         System.out.println("creadted");
+        //Update
+        driver.findElement(By.id("name")).clear();
+        driver.findElement(By.id("email")).clear();
+
+        driver.findElement(By.id("name")).sendKeys("mounesh updated");
+        driver.findElement(By.id("email")).sendKeys("@gmail Updated");
+
+        con.prepareStatement(
+                "update curd set name='mounesh updated',email='@gamil Updated' where id=1").executeUpdate();
+        System.out.println("updated");
+        //delete
+
+        con.prepareStatement("delete from curd where id=1").executeUpdate();
         driver.quit();
-
-
-
-
+        //read
+        Showcurd(con);
+    }
+    public static void Showcurd(Connection con) throws Exception{
+        ResultSet rs=con.createStatement().executeQuery("select * from curd");
+        while (rs.next())
+            System.out.println(rs.getInt(1)
+                    +" "+rs.getString(2)
+                    +" "+rs.getString(3));
     }
 }
 ```
