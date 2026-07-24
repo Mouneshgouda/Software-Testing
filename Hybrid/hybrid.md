@@ -23,72 +23,6 @@ Instead of writing Selenium code in every test, we create a page class.
 
 ---
 
-## Without POM
-
-Every test repeats the same code.
-
-```java
-driver.findElement(By.id("username")).sendKeys("admin");
-driver.findElement(By.id("password")).sendKeys("1234");
-driver.findElement(By.id("login")).click();
-```
-
-Imagine you have **50 tests** using the Login page.
-
-If
-
-```java
-By.id("username")
-```
-
-changes to
-
-```java
-By.name("user")
-```
-
-you must update all 50 tests.
-
----
-
-## With POM
-
-### LoginPage.java
-
-```java
-public class LoginPage {
-
-    WebDriver driver;
-
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    public void login(String username, String password) {
-
-        driver.findElement(By.id("username"))
-              .sendKeys(username);
-
-        driver.findElement(By.id("password"))
-              .sendKeys(password);
-
-        driver.findElement(By.id("login"))
-              .click();
-    }
-}
-```
-
-### Test Class
-
-```java
-LoginPage page = new LoginPage(driver);
-
-page.login("admin", "1234");
-```
-
-Now if the locator changes, you only update **LoginPage.java**.
-
-### Summary
 
 ✅ POM stores:
 
@@ -110,47 +44,10 @@ Examples:
 - JSON
 - Properties file
 
----
-
-## Without Data-Driven
-
-```java
-page.login("admin","1234");
-
-page.login("john","abcd");
-
-page.login("alice","xyz");
-```
 
 Every time new test data is needed, Java code must change.
 
 ---
-
-## With Data-Driven
-
-### Excel
-
-| Username | Password |
-|-----------|----------|
-| admin | 1234 |
-| john | abcd |
-| alice | xyz |
-
-Java simply reads one row at a time.
-
-```java
-page.login(username, password);
-```
-
-Tomorrow someone adds
-
-| Username | Password |
-|-----------|----------|
-| manager | test123 |
-
-No Java code changes.
-
-Only Excel changes.
 
 ### Summary
 
