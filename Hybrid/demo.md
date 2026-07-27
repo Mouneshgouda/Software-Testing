@@ -59,3 +59,264 @@ New-Item src\test\resources\config.properties
 ```
 
 
+# 1.BaseTest
+
+```python
+package base;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import utils.ConfigReader;
+
+public class BaseTest {
+
+    public static WebDriver driver;
+
+    public void start() throws Exception {
+
+        driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+
+        Thread.sleep(2000);
+
+        driver.get(ConfigReader.get("url"));
+
+        Thread.sleep(3000);
+    }
+
+
+    public void end(){
+
+        driver.quit();
+
+    }
+}
+```
+
+# 2.ConfigReader
+
+```python
+
+package utils;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class ConfigReader {
+
+
+static Properties p = new Properties();
+
+
+static {
+
+try {
+
+p.load(new FileInputStream(
+"src/test/resources/config.properties"));
+
+}
+catch(Exception e){
+
+e.printStackTrace();
+
+}
+
+}
+
+
+public static String get(String key){
+
+return p.getProperty(key);
+
+}
+
+}
+
+```
+
+# 3.WikipediaPage
+
+```python
+
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+public class WikipediaPage {
+
+
+WebDriver driver;
+
+
+public WikipediaPage(WebDriver driver){
+
+this.driver = driver;
+
+}
+
+
+public void search(String text) throws Exception {
+
+
+driver.findElement(
+By.id("searchInput"))
+.sendKeys(text);
+
+
+Thread.sleep(2000);
+
+
+driver.findElement(
+By.xpath("//button[@type='submit']"))
+.click();
+
+
+Thread.sleep(5000);
+
+
+}
+
+}
+
+```
+
+# 4.WikiTest
+
+```python
+
+package tests;
+
+
+import org.testng.annotations.Test;
+
+import base.BaseTest;
+import pages.WikipediaPage;
+import utils.ConfigReader;
+
+
+public class WikiTest extends BaseTest {
+
+
+@Test
+public void searchWiki() throws Exception {
+
+
+start();
+
+
+WikipediaPage page =
+new WikipediaPage(driver);
+
+
+page.search(
+ConfigReader.get("search")
+);
+
+
+System.out.println(
+driver.getTitle()
+);
+
+
+end();
+
+}
+
+}
+
+```
+
+
+## dependency
+```python
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>untitled2</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>26</maven.compiler.source>
+        <maven.compiler.target>26</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.33.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.11.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.1.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.50.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.3.232</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.8.0</version>
+        </dependency>
+
+        <!-- Apache POI Excel Reader -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.5</version>
+        </dependency>
+    </dependencies>
+</project>
+
+```
+
+
+
