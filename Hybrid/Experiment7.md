@@ -50,7 +50,7 @@ mkdir src\main\java\base
 mkdir src\main\java\pages
 mkdir src\test\java\tests
 mkdir src\main\java\utils
-mkdir src\main\resources
+mkdir src\test\resources
 ```
 
 ## 🍎 macOS / 🐧 Linux
@@ -60,7 +60,7 @@ mkdir -p src/main/java/base
 mkdir -p src/main/java/pages
 mkdir -p src/test/java/tests
 mkdir -p src/main/java/utils
-mkdir -p src/main/resources
+mkdir -p src/test/resources
 ```
 
 ---
@@ -82,7 +82,7 @@ type nul > src\test\java\tests\BookingTest.java
 
 type nul > src\main\java\utils\ConfigReader.java
 
-type nul > src\main\resources\config.properties
+type nul > src\test\resources\config.properties
 ```
 
 ## 🍎 macOS / 🐧 Linux
@@ -100,5 +100,5 @@ touch src/test/java/tests/BookingTest.java
 
 touch src/main/java/utils/ConfigReader.java
 
-touch src/main/resources/config.properties
+touch src/test/resources/config.properties
 ```
