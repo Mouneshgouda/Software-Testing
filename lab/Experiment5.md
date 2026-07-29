@@ -83,7 +83,6 @@ If you're using Maven, add the following dependencies to your `pom.xml`.
         <groupId>org.testng</groupId>
         <artifactId>testng</artifactId>
         <version>7.11.0</version>
-        <scope>test</scope>
     </dependency>
 
     <!-- Log4j2 API -->
