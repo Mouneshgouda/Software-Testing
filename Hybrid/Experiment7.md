@@ -16,27 +16,34 @@ Click below to download the original bus booking website source code:
 ```text
 BusBookingAutomation
 │
-└── src
-    └── test
-        ├── java
-        │   ├── base
-        │   │   └── BaseTest.java
-        │   │
-        │   ├── pages
-        │   │   ├── HomePage.java
-        │   │   ├── BusPage.java
-        │   │   ├── SeatPage.java
-        │   │   ├── PassengerPage.java
-        │   │   └── PaymentPage.java
-        │   │
-        │   ├── tests
-        │   │   └── BookingTest.java
-        │   │
-        │   └── utils
-        │       └── ConfigReader.java
-        │
-        └── resources
-            └── config.properties
+├── pom.xml
+│
+├── src
+│   │
+│   ├── main
+│   │   └── java
+│   │       │
+│   │       ├── base
+│   │       │    └── BaseTest.java
+│   │       │
+│   │       ├── pages
+│   │       │    ├── HomePage.java
+│   │       │    ├── BusPage.java
+│   │       │    ├── SeatPage.java
+│   │       │    ├── PassengerPage.java
+│   │       │    └── PaymentPage.java
+│   │       │
+│   │       └── utils
+│   │            └── ConfigReader.java
+│   │
+│   └── test
+│       │
+│       ├── java
+│       │    └── test
+│       │         └── BookingTest.java
+│       │
+│       └── resources
+│            └── config.properties
 ```
 
 ---
