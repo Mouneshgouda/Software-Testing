@@ -23,26 +23,26 @@ BusBookingAutomation
 │   ├── main
 │   │   └── java
 │   │       │
-│   │       ├── base
+│   │       ├── base  (create Package)
 │   │       │    └── BaseTest.java
 │   │       │
-│   │       ├── pages
+│   │       ├── pages  ( (create Package)
 │   │       │    ├── HomePage.java
 │   │       │    ├── BusPage.java
 │   │       │    ├── SeatPage.java
 │   │       │    ├── PassengerPage.java
 │   │       │    └── PaymentPage.java
 │   │       │
-│   │       └── utils
+│   │       └── utils  (create Package)
 │   │            └── ConfigReader.java
 │   │
 │   └── test
 │       │
 │       ├── java
-│       │    └── test
-│       │         └── BookingTest.java
+│       │    └── tests  (create Package)
+│       │         └── BookingTest.java  
 │       │
-│       └── resources
+│       └── resources  (create Directory)
 │            └── config.properties
 ```
 
