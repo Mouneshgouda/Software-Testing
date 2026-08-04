@@ -113,3 +113,99 @@ touch src/main/java/utils/ConfigReader.java
 
 touch src/test/resources/config.properties
 ```
+
+## Config.Properties
+```python
+
+url=file:///C:/Users/LENOVO/Downloads/bus-CU/bus-CU/index.html
+
+fromLocation=1
+travelDate=2026-08-15
+
+name=Guru Patil
+idNumber=12345678
+phone=0712345678
+email=guru@gmail.com
+```
+
+
+## ConfigRedaer
+
+
+```python
+package utils;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class ConfigReader {
+
+    static Properties p=new Properties();
+
+    static  {
+        try{
+            p.load(new FileInputStream("src\\main\\resources\\config.properties"));
+        }
+        catch (Exception e){
+            e.printStackTrace();
+
+        }
+    }
+    public static  String get(String key){
+        return p.getProperty(key);
+    }
+
+    }
+
+```
+
+
+## base/BaseTest.java
+
+```python
+package base;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import utils.ConfigReader;
+
+
+public class BaseTest {
+
+
+    protected WebDriver driver;
+
+
+
+    public void setup(){
+
+
+        driver = new ChromeDriver();
+
+
+        driver.manage()
+                .window()
+                .maximize();
+
+
+
+        driver.get(
+                ConfigReader.get("url")
+        );
+
+
+    }
+
+
+
+    public void close(){
+
+        driver.quit();
+
+    }
+
+
+}
+
+```
