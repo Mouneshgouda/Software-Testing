@@ -13,7 +13,7 @@ Click below to download the original bus booking website source code:
 
 
 
-[Download ZIP](https://github.com/james-muriithi/bus)
+[Download ZIP](https://mouneshgouda.github.io/busBooking/)
 
 # 📁 Project Structure
 
