@@ -161,3 +161,60 @@ touch src/test/resources/config.properties
 
 ---
 
+## ConfigReader
+```python
+
+
+package utils;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class ConfigReader {
+    static Properties p = new Properties();
+    static {
+        try {
+            p.load(new FileInputStream(
+                    "src/test/resources/config.properties"));
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    public static String get(String key){
+
+        return p.getProperty(key);
+
+    }
+
+}
+
+
+```
+## BaseTest
+```python
+
+
+package base;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import utils.ConfigReader;
+public class BaseTest {
+    public static WebDriver driver;
+    public void setup() throws Exception {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+        driver.get(ConfigReader.get("url"));
+        Thread.sleep(3000);
+    }
+    public void close(){
+        driver.quit();
+
+    }
+}
+
+
+```
+
+
