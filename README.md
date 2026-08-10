@@ -1,6 +1,8 @@
 ## Bus Booking
-https://james-muriithi.github.io/bus/index.html
+https://mouneshgouda.github.io/busBooking/
 
+## Hotel Booking
+https://mouneshgouda.github.io/HotelBooking/index.html
 
 ## Mock Test Drive Submission
 
