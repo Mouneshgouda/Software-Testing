@@ -4,9 +4,7 @@
 ├── src
 │   ├── main
 │   │   ├── java
-│   │   │   ├── org
-│   │   │   │   └── example
-│   │   │   │       └── Main.java
+│   │   │   ├──
 │   │   │   ├── pages
 │   │   │   │   ├── BookingPage.java
 │   │   │   │   ├── HistoryPage.java
@@ -15,8 +13,7 @@
 │   │   │   └── tests
 │   │   │       └── HotelTest.java
 │   │   └── resources
-│   └── test
-│       └── java
+
 
 
 ```
