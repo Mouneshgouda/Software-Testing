@@ -217,4 +217,31 @@ public class BaseTest {
 
 ```
 
+## HomePage
+
+```python
+package pages;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class HomePage {
+    WebDriver driver;
+    public HomePage(WebDriver driver){
+        this.driver=driver;
+    }
+    public void searchBus(String from,String to ,String date){
+        Select selectfrom =new Select(driver.findElement(By.id("from")));
+        selectfrom.selectByVisibleText(from);
+        Select toselect =new Select(driver.findElement(By.id("to")));
+        toselect.selectByVisibleText(to);
+        driver.findElement(By.id("date")).sendKeys(date);
+        driver.findElement(By.xpath("//button[conatins(text(),'Search Bus'])")).click();
+    }
+
+
+}
+
+```
+
 
