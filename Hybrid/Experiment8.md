@@ -12,7 +12,7 @@
 │   │   │   │   └── RoomsPage.java
 │   │   │   └── tests
 │   │   │       └── HotelTest.java
-│   │   └── resources
+
 
 
 
