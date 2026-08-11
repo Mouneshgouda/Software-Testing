@@ -1,4 +1,142 @@
 ```python
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class hello {
+
+    public static void main(String[] args) throws Exception {
+
+        WebDriver driver = new ChromeDriver();
+
+        // Change this to your HTML file location
+        driver.get("https://mouneshgouda.github.io/Hospital-Appointment/");
+
+        driver.manage().window().maximize();
+
+        // 1. Select Cardiology
+        driver.findElement(
+                By.cssSelector(
+                        ".department[data-dept='Cardiology']"
+                )
+        ).click();
+
+        Thread.sleep(1000);
+
+        // 2. Select doctor
+        WebElement doctor = driver.findElement(
+                By.xpath(
+                        "//h4[normalize-space()='Dr. Ananya Rao']"
+                )
+        );
+
+        doctor.findElement(
+                By.xpath(
+                        "./ancestor::div[contains(@class,'doctor')]"
+                )
+        ).click();
+
+        Thread.sleep(500);
+
+        // 3. Continue
+        driver.findElement(
+                By.id("doctorNext")
+        ).click();
+
+        Thread.sleep(500);
+
+        // 4. Select first available date
+        driver.findElement(
+                By.cssSelector(".date")
+        ).click();
+
+        // 5. Select first available time
+        driver.findElement(
+                By.cssSelector(".time:not(.booked)")
+        ).click();
+
+        // 6. Continue
+        driver.findElement(
+                By.id("dateNext")
+        ).click();
+
+        // 7. Patient name
+        driver.findElement(
+                By.id("patientName")
+        ).sendKeys("Rahul Kumar");
+
+        // 8. Phone
+        driver.findElement(
+                By.id("phone")
+        ).sendKeys("9876543210");
+
+        // 9. Email
+        driver.findElement(
+                By.id("email")
+        ).sendKeys("rahul@gmail.com");
+
+        // 10. Date of birth
+        driver.findElement(
+                By.id("dob")
+        ).sendKeys("05/15/1995");
+
+        // 11. Gender
+        driver.findElement(
+                By.id("gender")
+        ).sendKeys("Male");
+
+        // 12. Patient type
+        driver.findElement(
+                By.id("patientType")
+        ).sendKeys("New patient");
+
+        // 13. Reason
+        driver.findElement(
+                By.id("reason")
+        ).sendKeys("Regular consultation");
+
+        // 14. Review
+        driver.findElement(
+                By.id("patientNext")
+        ).click();
+
+        Thread.sleep(1000);
+
+        // 15. Confirm appointment
+        driver.findElement(
+                By.id("confirmButton")
+        ).click();
+
+        Thread.sleep(1000);
+
+        // 16. Print appointment ID
+        String appointmentId =
+                driver.findElement(
+                        By.id("bookingId")
+                ).getText();
+
+        System.out.println(
+                "Appointment booked successfully!"
+        );
+
+        System.out.println(
+                "Appointment ID: " + appointmentId
+        );
+
+        // Keep browser open for 5 seconds
+        Thread.sleep(5000);
+
+        driver.quit();
+    }
+}
+
+```
+
+
+
+
+```python
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
