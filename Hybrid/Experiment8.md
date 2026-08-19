@@ -266,15 +266,9 @@ public class HistoryPage {
 
 
     public void verifyPage() {
-
-        System.out.println(
-                "Current Page : " + driver.getTitle()
-        );
+          System.out.println("Booking Done");
 
 
-        System.out.println(
-                "Current URL : " + driver.getCurrentUrl()
-        );
     }
 }
 
@@ -309,20 +303,15 @@ public class HotelTest {
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
         home = new HomePage(driver);
         rooms = new RoomsPage(driver);
         booking = new BookingPage(driver);
         history = new HistoryPage(driver);
     }
-
     @Test
     public void hotelBookingTest() throws Exception {
 
         home.openWebsite();
-
-        System.out.println("Page Title: " + driver.getTitle());
 
         home.searchRoom(
                 "08/10/2026",
@@ -346,9 +335,9 @@ public class HotelTest {
 
     @AfterMethod
     public void tearDown() {
+          driver.quit();
 
-        if (driver != null) {
-            driver.quit();
+       
         }
     }
 }
