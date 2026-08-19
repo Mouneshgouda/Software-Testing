@@ -60,3 +60,28 @@ touch src/main/java/pages/HomePage.java
 touch src/main/java/pages/RoomsPage.java
 touch src/main/java/tests/HotelTest.java
 ```
+## HomePage
+
+```python
+
+package pages;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
+
+public class HomePage {
+    WebDriver driver;
+    public HomePage(WebDriver driver){
+        this.driver=driver;
+    }
+    public void openWebpage(){
+        driver.get("https://mouneshgouda.github.io/Hotel-Booking/");
+    }
+    public void searchRoom(String checkIn,String checkOut,String guests){
+        driver.findElement(By.id("checkIn")).sendKeys(checkIn);
+        driver.findElement(By.id("checkOut")).sendKeys(checkOut);
+        driver.findElement(By.id("guests")).sendKeys(guests);
+        driver.findElement(By.id("searchRooms")).click();
+    }
+}
+
+```
