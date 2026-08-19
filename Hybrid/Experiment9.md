@@ -1,7 +1,6 @@
 ## Demo url
-```python
+
 https://mouneshgouda.github.io/Hospital-Appointment/
-```
 
 ```python
 src
