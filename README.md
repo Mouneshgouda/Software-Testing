@@ -1,3 +1,105 @@
+## insurence
+```python
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class hello {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+
+        driver.get(
+                "file:///C:/Users/gurup/OneDrive/Documents/insurence/index.html"
+        );
+
+        Thread.sleep(1000);
+
+        // Get my quote
+        driver.findElement(By.className("primary-btn")).click();
+
+        Thread.sleep(1000);
+
+        // Scroll down once
+        ((JavascriptExecutor) driver).executeScript(
+                "window.scrollTo(0, 500);"
+        );
+
+        Thread.sleep(500);
+
+        // Select Car
+        driver.findElement(
+                By.cssSelector(".insurance[data-type='Car']")
+        ).click();
+
+        Thread.sleep(500);
+
+        // Continue
+        driver.findElement(By.id("nextBtn")).click();
+
+        Thread.sleep(1000);
+
+        // Select Standard
+        driver.findElement(
+                By.cssSelector(".plan[data-plan='Standard']")
+        ).click();
+
+        Thread.sleep(500);
+
+        // Continue
+        driver.findElement(By.id("nextBtn")).click();
+
+        Thread.sleep(1000);
+
+        // Enter details
+        driver.findElement(By.id("firstName"))
+                .sendKeys("John");
+
+        driver.findElement(By.id("lastName"))
+                .sendKeys("Smith");
+
+        driver.findElement(By.id("email"))
+                .sendKeys("john@gmail.com");
+
+        driver.findElement(By.id("age"))
+                .sendKeys("30");
+
+        Thread.sleep(500);
+
+        // Continue
+        driver.findElement(By.id("nextBtn")).click();
+
+        Thread.sleep(1000);
+
+        // Confirm
+        driver.findElement(By.id("nextBtn")).click();
+
+        Thread.sleep(1000);
+
+        // Success
+        String message = driver.findElement(
+                By.cssSelector(".success h2")
+        ).getText();
+
+        System.out.println("Message: " + message);
+
+        driver.quit();
+    }
+}
+
+
+```
+
+
+
+
+
+
 ```python
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
