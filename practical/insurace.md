@@ -59,77 +59,29 @@ New-Item src\main\java\tests\InsuranceTest.java -ItemType File
 
 ## BaseTest.java
 ```python
+package base;
 
-package tests;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import base.BaseTest;
-import pages.ConfirmationPage;
-import pages.DetailsPage;
-import pages.HomePage;
-import pages.InsurancePage;
-import pages.PlanPage;
+public class BaseTest {
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+    protected WebDriver driver;
 
-public class InsuranceTest extends BaseTest {
+    public void setup() {
 
-    // Before Test
-    @BeforeMethod
-    public void beforeTest() {
-        setup();
-        System.out.println("Browser opened");
+        driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+
+        driver.get(
+                "file:///C:/Users/gurup/OneDrive/Documents/insurence/index.html"
+        );
     }
 
-    // Test Case
-    @Test
-    public void getCarInsuranceQuote() throws InterruptedException {
+    public void tearDown() {
 
-        System.out.println("Test Case: Verify Car Insurance Quote");
-
-        // Create Page Objects
-        HomePage homePage = new HomePage(driver);
-        InsurancePage insurancePage = new InsurancePage(driver);
-        PlanPage planPage = new PlanPage(driver);
-        DetailsPage detailsPage = new DetailsPage(driver);
-        ConfirmationPage confirmationPage =
-                new ConfirmationPage(driver);
-
-        // Step 1: Get Quote
-        homePage.clickGetQuote();
-        homePage.scrollDown();
-
-        // Step 2: Select Car Insurance
-        insurancePage.selectCar();
-        insurancePage.clickNext();
-
-        // Step 3: Select Standard Plan
-        planPage.selectStandard();
-        planPage.clickNext();
-
-        // Step 4: Enter Details
-        detailsPage.enterDetails();
-        detailsPage.clickNext();
-
-        // Step 5: Confirm
-        confirmationPage.clickConfirm();
-
-        // Step 6: Verify Success Message
-        String message =
-                confirmationPage.getSuccessMessage();
-
-        System.out.println("Message: " + message);
-
-
-    }
-
-    // After Test
-    @AfterMethod
-    public void afterTest() {
-        tearDown();
-        System.out.println("Browser closed");
+        driver.quit();
     }
 }
 
