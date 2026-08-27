@@ -102,8 +102,6 @@ public class HomePage {
 
     WebDriver driver;
 
-    By getQuoteButton = By.className("primary-btn");
-
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -112,7 +110,7 @@ public class HomePage {
 
         Thread.sleep(1000);
 
-        driver.findElement(getQuoteButton).click();
+        driver.findElement(By.className("primary-btn")).click();
 
         Thread.sleep(1000);
     }
@@ -127,6 +125,136 @@ public class HomePage {
     }
 }
 
+```
+## InsurancePage
+```python
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class InsurancePage {
+
+    WebDriver driver;
+
+    public InsurancePage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void selectCar() throws InterruptedException {
+
+        driver.findElement(
+                By.cssSelector(".insurance[data-type='Car']")
+        ).click();
+
+        Thread.sleep(500);
+    }
+
+    public void clickNext() throws InterruptedException {
+
+        driver.findElement(By.id("nextBtn")).click();
+
+        Thread.sleep(1000);
+    }
+}
+
+```
+## PlanPage
+
+```python
+
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class PlanPage {
+
+    WebDriver driver;
+
+    public PlanPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void selectStandard() throws InterruptedException {
+
+        driver.findElement(
+                By.cssSelector(".plan[data-plan='Standard']")
+        ).click();
+
+        Thread.sleep(500);
+    }
+
+    public void clickNext() throws InterruptedException {
+
+        driver.findElement(By.id("nextBtn")).click();
+
+        Thread.sleep(1000);
+    }
+}
+
+```
+## DetailsPage
+
+```python
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class DetailsPage {
+
+    WebDriver driver;
+
+    public DetailsPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void enterDetails() throws InterruptedException {
+
+        driver.findElement(By.id("firstName")).sendKeys("John");
+        driver.findElement(By.id("lastName")).sendKeys("Smith");
+        driver.findElement(By.id("email")).sendKeys("john@gmail.com");
+        driver.findElement(By.id("age")).sendKeys("30");
+
+        Thread.sleep(500);
+    }
+
+    public void clickNext() throws InterruptedException {
+
+        driver.findElement(By.id("nextBtn")).click();
+
+        Thread.sleep(1000);
+    }
+}
+
+```
+
+## ConfirmationPage
 
 
+```python
+
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class ConfirmationPage {
+
+    WebDriver driver;
+
+    public ConfirmationPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void clickConfirm() throws InterruptedException {
+        driver.findElement(By.id("nextBtn")).click();
+        Thread.sleep(1000);
+    }
+
+    public String getSuccessMessage() {
+        return driver.findElement(By.cssSelector(".success h2")).getText();
+    }
+}
 ```
