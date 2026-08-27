@@ -157,6 +157,83 @@ public class InsurancePage {
         Thread.sleep(1000);
     }
 }
+```
+
+## InsuranceTest
+
+
+```python
+package tests;
+
+import base.BaseTest;
+import pages.ConfirmationPage;
+import pages.DetailsPage;
+import pages.HomePage;
+import pages.InsurancePage;
+import pages.PlanPage;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class InsuranceTest extends BaseTest {
+
+    // Before Test
+    @BeforeMethod
+    public void beforeTest() {
+        setup();
+    }
+
+    // Test Case
+    @Test
+    public void getCarInsuranceQuote() throws InterruptedException {
+
+
+        // Create Page Objects
+        HomePage homePage = new HomePage(driver);
+        InsurancePage insurancePage = new InsurancePage(driver);
+        PlanPage planPage = new PlanPage(driver);
+        DetailsPage detailsPage = new DetailsPage(driver);
+        ConfirmationPage confirmationPage =
+                new ConfirmationPage(driver);
+
+        // Step 1: Get Quote
+        homePage.clickGetQuote();
+        homePage.scrollDown();
+
+        // Step 2: Select Car Insurance
+        insurancePage.selectCar();
+        insurancePage.clickNext();
+
+        // Step 3: Select Standard Plan
+        planPage.selectStandard();
+        planPage.clickNext();
+
+        // Step 4: Enter Details
+        detailsPage.enterDetails();
+        detailsPage.clickNext();
+
+        // Step 5: Confirm
+        confirmationPage.clickConfirm();
+
+        // Step 6: Verify Success Message
+        String message =
+                confirmationPage.getSuccessMessage();
+
+        System.out.println("Message: " + message);
+
+
+    }
+
+    // After Test
+    @AfterMethod
+    public void afterTest() {
+        teardown();
+        System.out.println("Browser closed");
+    }
+}
+```
 
 ```
 ## PlanPage
