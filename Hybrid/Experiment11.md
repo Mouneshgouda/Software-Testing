@@ -1,3 +1,6 @@
+## url
+https://mouneshgouda.github.io/Insurence/
+
 ```python
 untitled3
 └── src
@@ -75,7 +78,7 @@ public class BaseTest {
         driver.manage().window().maximize();
 
         driver.get(
-                "file:///C:/Users/gurup/OneDrive/Documents/insurence/index.html"
+                "https://mouneshgouda.github.io/Insurence/"
         );
     }
 
