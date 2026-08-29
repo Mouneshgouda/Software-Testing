@@ -59,3 +59,74 @@ New-Item src\main\java\tests\InsuranceTest.java -ItemType File
 
 
 ```
+
+
+## BaseTest.java
+```python
+package base;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BaseTest {
+
+    protected WebDriver driver;
+
+    public void setup() {
+
+        driver = new ChromeDriver();
+
+        driver.manage().window().maximize();
+
+        driver.get(
+                "file:///C:/Users/gurup/OneDrive/Documents/insurence/index.html"
+        );
+    }
+
+    public void tearDown() {
+
+        driver.quit();
+    }
+}
+
+
+
+```
+
+
+## pages/Homepage
+```python
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+
+public class HomePage {
+
+    WebDriver driver;
+
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void clickGetQuote() throws InterruptedException {
+
+        Thread.sleep(1000);
+
+        driver.findElement(By.className("primary-btn")).click();
+
+        Thread.sleep(1000);
+    }
+
+    public void scrollDown() throws InterruptedException {
+
+        ((JavascriptExecutor) driver).executeScript(
+                "window.scrollTo(0, 500);"
+        );
+
+        Thread.sleep(500);
+    }
+}
+
+```
