@@ -232,6 +232,53 @@
 | 60 | Shanmughathithan M | 727724euit801@skcet.ac.in | 0% |
 
 
+# Course Completion Status – Div E
+
+**Date:** 06 September 2026
+
+| S.No. | Student Name | Email ID | Course Completion |
+|:---:|---|---|:---:|
+| 1 | Divyadharshini S | 727824tuit044@skct.edu.in | 86.67% |
+| 2 | Balamanikandan S S | 727824tuit026@skct.edu.in | 60% |
+| 3 | Dinesh R S | 727824tuit042@skct.edu.in | 60% |
+| 4 | Logeshwaran.r | 727825tuit604@skct.edu.in | 46.67% |
+| 5 | Gowsik B | 727824tuit049@skct.edu.in | 40% |
+| 6 | Aswin S | 727824tuit023@skct.edu.in | 33.33% |
+| 7 | Divyasagar P | 727824tuit045@skct.edu.in | 33.33% |
+| 8 | Amritha S | 727824tuit011@skct.edu.in | 20% |
+| 9 | Barath S | 727824tuit027@skct.edu.in | 20% |
+| 10 | Abdul Shiyam A | 727824tuit001@skct.edu.in | 0% |
+| 11 | Abishek R | 727824tuit005@skct.edu.in | 0% |
+| 12 | Adeeb Ahamed M | 727824tuit006@skct.edu.in | 0% |
+| 13 | Adhitya N | 727824tuit007@skct.edu.in | 0% |
+| 14 | Ajay K | 727824tuit008@skct.edu.in | 0% |
+| 15 | Amrisha J | 727824tuit010@skct.edu.in | 0% |
+| 16 | Anand Sanjay M | 727824tuit012@skct.edu.in | 0% |
+| 17 | Anbuselvan B | 727824tuit014@skct.edu.in | 0% |
+| 18 | Arun Prasath M | 727824tuit018@skct.edu.in | 0% |
+| 19 | Ashwanth S | 727824tuit019@skct.edu.in | 0% |
+| 20 | Aswath S | 727824tuit021@skct.edu.in | 0% |
+| 21 | Athesh S | 727824tuit024@skct.edu.in | 0% |
+| 22 | Bragadeesh P | 727824tuit028@skct.edu.in | 0% |
+| 23 | Deepak S | 727824tuit030@skct.edu.in | 0% |
+| 24 | Dhanyasri J | 727824tuit034@skct.edu.in | 0% |
+| 25 | Dharun Prasath B | 727824tuit037@skct.edu.in | 0% |
+| 26 | Dhisiharan P | 727824tuit039@skct.edu.in | 0% |
+| 27 | Dhiyaneshwar K | 727824tuit040@skct.edu.in | 0% |
+| 28 | Dinesh Kumar G | 727824tuit041@skct.edu.in | 0% |
+| 29 | Edwin Joshua D | 727824tuit046@skct.edu.in | 0% |
+| 30 | Gopinath K | 727824tuit048@skct.edu.in | 0% |
+| 31 | Gowtham Periyasamy S | 727824tuit050@skct.edu.in | 0% |
+| 32 | Guru Vishal V S | 727824tuit051@skct.edu.in | 0% |
+| 33 | Hari Prasath M | 727824tuit054@skct.edu.in | 0% |
+| 34 | Harish Adithya C K | 727824tuit056@skct.edu.in | 0% |
+| 35 | Harishkumar S V | 727824tuit057@skct.edu.in | 0% |
+| 36 | Karthik Ss | 727824tuit602@skct.edu.in | 0% |
+| 37 | Kiran M | 727824tuit603@skct.edu.in | 0% |
+| 38 | R Logeswaran | 727824tuit604@skct.edu.in | 0% |
+| 39 | Kiran M | 727825tuit603@skct.edu.in | 0% |
+
+
 ## saucedemo
 https://www.saucedemo.com/
 
