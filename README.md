@@ -164,6 +164,74 @@
 | 62 | Siddharth R | 727725euit615@skcet.ac.in | 0% |
 
 
+# Course Completion Status – Div D
+
+**Date:** 06 September 2026
+
+| S.No. | Student Name | Email ID | Course Completion |
+|:---:|---|---|:---:|
+| 1 | Sivanesan T | 727724euit252@skcet.ac.in | 80% |
+| 2 | Trisshna R Kumar | 727724euit291@skcet.ac.in | 73.33% |
+| 3 | Vishnuram S | 727724euit306@skcet.ac.in | 60% |
+| 4 | Sri Kumaran V | 727724euit256@skcet.ac.in | 53.33% |
+| 5 | Srinithi S | 727724euit261@skcet.ac.in | 40% |
+| 6 | Thanupriyan S | 727724euit284@skcet.ac.in | 40% |
+| 7 | Shriya Gitanjali M | 727724euit247@skcet.ac.in | 33.33% |
+| 8 | Sivapiriyan S | 727724euit253@skcet.ac.in | 33.33% |
+| 9 | Soundarya K | 727724euit255@skcet.ac.in | 33.33% |
+| 10 | Sudhesamithrasavan C | 727724euit269@skcet.ac.in | 33.33% |
+| 11 | Sudhesi M | 727724euit270@skcet.ac.in | 33.33% |
+| 12 | Suresh Kumar E | 727724euit272@skcet.ac.in | 33.33% |
+| 13 | Tharani R | 727724euit285@skcet.ac.in | 33.33% |
+| 14 | Shreenidhi R | 727724euit311@skcet.ac.in | 26.67% |
+| 15 | Tamil Kumaran V | 727724euit277@skcet.ac.in | 20% |
+| 16 | Sujith.g | 727725euit619@skcet.ac.in | 20% |
+| 17 | Sri Nath R | 727724euit257@skcet.ac.in | 13.33% |
+| 18 | Sudharshan K | 727724euit268@skcet.ac.in | 13.33% |
+| 19 | Vigneshwar J R | 727724euit298@skcet.ac.in | 13.33% |
+| 20 | Sharan S | 727724euit241@skcet.ac.in | 6.67% |
+| 21 | Taaruniika S | 727724euit276@skcet.ac.in | 6.67% |
+| 22 | Tharoon M K | 727724euit286@skcet.ac.in | 6.67% |
+| 23 | Theetchana Pandi O P | 727724euit287@skcet.ac.in | 6.67% |
+| 24 | Priyadharshini P | 727725euit612@skcet.ac.in | 6.67% |
+| 25 | Selvaganapathy S | 727724euit238@skcet.ac.in | 0% |
+| 26 | Shanjai E | 727724euit240@skcet.ac.in | 0% |
+| 27 | Sharan S P | 727724euit242@skcet.ac.in | 0% |
+| 28 | Sharvesh P S | 727724euit243@skcet.ac.in | 0% |
+| 29 | Sharvesh S | 727724euit244@skcet.ac.in | 0% |
+| 30 | Shasmitha M R | 727724euit245@skcet.ac.in | 0% |
+| 31 | Shruthi Prasanth K P | 727724euit248@skcet.ac.in | 0% |
+| 32 | Siddarth K | 727724euit249@skcet.ac.in | 0% |
+| 33 | Siddesh N G | 727724euit250@skcet.ac.in | 0% |
+| 34 | Siddharth S | 727724euit251@skcet.ac.in | 0% |
+| 35 | Sivaraman P | 727724euit254@skcet.ac.in | 0% |
+| 36 | Sri Santhosh G | 727724euit258@skcet.ac.in | 0% |
+| 37 | Sridharan E | 727724euit259@skcet.ac.in | 0% |
+| 38 | Srinivashkarthi B | 727724euit262@skcet.ac.in | 0% |
+| 39 | Subiksha R | 727724euit267@skcet.ac.in | 0% |
+| 40 | Sugandhan A | 727724euit271@skcet.ac.in | 0% |
+| 41 | Suryaprasath L R | 727724euit273@skcet.ac.in | 0% |
+| 42 | Sushmitha A | 727724euit274@skcet.ac.in | 0% |
+| 43 | Tanuj B | 727724euit279@skcet.ac.in | 0% |
+| 44 | Tarunika K | 727724euit281@skcet.ac.in | 0% |
+| 45 | Tejas Anand Salunkhe | 727724euit282@skcet.ac.in | 0% |
+| 46 | Thendral Tamilvanan | 727724euit288@skcet.ac.in | 0% |
+| 47 | Udhaya Krishnan R | 727724euit292@skcet.ac.in | 0% |
+| 48 | Varun Saravanakumar | 727724euit294@skcet.ac.in | 0% |
+| 49 | Vel Vignesh S | 727724euit295@skcet.ac.in | 0% |
+| 50 | Venkatachalam P | 727724euit296@skcet.ac.in | 0% |
+| 51 | Vikash C | 727724euit299@skcet.ac.in | 0% |
+| 52 | Vinoth Kumar S | 727724euit301@skcet.ac.in | 0% |
+| 53 | Vishal Cj | 727724euit302@skcet.ac.in | 0% |
+| 54 | Vishalini V | 727724euit303@skcet.ac.in | 0% |
+| 55 | Vishnu Dharshan S | 727724euit304@skcet.ac.in | 0% |
+| 56 | Vishnu Sakthi A | 727724euit305@skcet.ac.in | 0% |
+| 57 | Yamuna L | 727724euit307@skcet.ac.in | 0% |
+| 58 | Boomesh Selvan P | 727724euit309@skcet.ac.in | 0% |
+| 59 | Sivaguru S | 727725euit616@skcet.ac.in | 0% |
+| 60 | Shanmughathithan M | 727724euit801@skcet.ac.in | 0% |
+
+
 ## saucedemo
 https://www.saucedemo.com/
 
