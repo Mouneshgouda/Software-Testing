@@ -31,6 +31,70 @@
 
 
 
+# Course Completion Status – Div B
+
+**Date:** 06 September 2026
+
+| S.No. | Student Name | Email ID | Course Completion |
+|:---:|---|---|:---:|
+| 1 | Harishri S | 727724euit078@skcet.ac.in | 93.33% |
+| 2 | Manikanda Prabhu R A | 727724euit131@skcet.ac.in | 80% |
+| 3 | Manimaran V | 727724euit133@skcet.ac.in | 80% |
+| 4 | Jai Jothi Prakash S | 727724euit090@skcet.ac.in | 73.33% |
+| 5 | Mukeshkumar R (04.12.2006) | 727724euit146@skcet.ac.in | 73.33% |
+| 6 | Hemanth K | 727724euit082@skcet.ac.in | 60% |
+| 7 | Kavin M | 727724euit109@skcet.ac.in | 53.33% |
+| 8 | Kishore S | 727724euit119@skcet.ac.in | 53.33% |
+| 9 | Livinraj R | 727724euit123@skcet.ac.in | 53.33% |
+| 10 | Jeeviga G | 727724euit096@skcet.ac.in | 46.67% |
+| 11 | Kabish Pandi P | 727724euit099@skcet.ac.in | 46.67% |
+| 12 | Keerthivasan S | 727724euit115@skcet.ac.in | 46.67% |
+| 13 | Mythri L | 727724euit148@skcet.ac.in | 46.67% |
+| 14 | Harshaprabha N | 727724euit080@skcet.ac.in | 40% |
+| 15 | Hema Varthini V | 727724euit081@skcet.ac.in | 40% |
+| 16 | Hemanth Shekaran S | 727724euit084@skcet.ac.in | 40% |
+| 17 | Indhumathi R | 727724euit086@skcet.ac.in | 40% |
+| 18 | Isha Ann Rebeiro | 727724euit088@skcet.ac.in | 40% |
+| 19 | Jasim M S | 727724euit091@skcet.ac.in | 40% |
+| 20 | Jawahar M I | 727724euit093@skcet.ac.in | 40% |
+| 21 | Jayanth R | 727724euit095@skcet.ac.in | 40% |
+| 22 | Karthick Geethanath | 727724euit104@skcet.ac.in | 40% |
+| 23 | Kaviya K | 727724euit110@skcet.ac.in | 40% |
+| 24 | Kirithik Sharan S | 727724euit117@skcet.ac.in | 40% |
+| 25 | Kishore P | 727724euit118@skcet.ac.in | 40% |
+| 26 | Lokes Kumar V | 727724euit126@skcet.ac.in | 40% |
+| 27 | Madhan L | 727724euit127@skcet.ac.in | 40% |
+| 28 | Madhu Chandhana K S | 727724euit128@skcet.ac.in | 40% |
+| 29 | Manasa M | 727724euit130@skcet.ac.in | 40% |
+| 30 | Manisvar M | 727724euit134@skcet.ac.in | 40% |
+| 31 | Nadhinkumar P | 727724euit149@skcet.ac.in | 40% |
+| 32 | Naveen B | 727724euit152@skcet.ac.in | 40% |
+| 33 | Inish T | 727724euit087@skcet.ac.in | 33.33% |
+| 34 | Karishma B | 727724euit103@skcet.ac.in | 33.33% |
+| 35 | Nesan K | 727724euit156@skcet.ac.in | 33.33% |
+| 36 | Imran Abdul Malik | 727725euit605@skcet.ac.in | 33.33% |
+| 37 | Lisa K | 727724euit122@skcet.ac.in | 26.67% |
+| 38 | Logeshwaran P | 727724euit124@skcet.ac.in | 26.67% |
+| 39 | Mohamed Irfan Naseer J | 727724euit139@skcet.ac.in | 26.67% |
+| 40 | Naveesh N | 727724euit154@skcet.ac.in | 26.67% |
+| 41 | Haritha P | 727724euit079@skcet.ac.in | 0% |
+| 42 | Hemanth S | 727724euit083@skcet.ac.in | 0% |
+| 43 | Immanuel Varun Raj S | 727724euit085@skcet.ac.in | 0% |
+| 44 | Jaya Suryaa S K | 727724euit094@skcet.ac.in | 0% |
+| 45 | Kajendhiran M | 727724euit100@skcet.ac.in | 0% |
+| 46 | Kanishkha E K | 727724euit102@skcet.ac.in | 0% |
+| 47 | Keshini R | 727724euit116@skcet.ac.in | 0% |
+| 48 | Manikandan N | 727724euit132@skcet.ac.in | 0% |
+| 49 | Mano Ganesh B | 727724euit135@skcet.ac.in | 0% |
+| 50 | Marwan Ramiz M | 727724euit136@skcet.ac.in | 0% |
+| 51 | Mathavan K | 727724euit137@skcet.ac.in | 0% |
+| 52 | Mukesh B | 727724euit143@skcet.ac.in | 0% |
+| 53 | Mukesh Bharath A | 727724euit144@skcet.ac.in | 0% |
+| 54 | Naveena S J | 727724euit153@skcet.ac.in | 0% |
+| 55 | Navin Karthick M | 727724euit155@skcet.ac.in | 0% |
+| 56 | Kathir S P | 727725euit608@skcet.ac.in | 0% |
+
+
 ## saucedemo
 https://www.saucedemo.com/
 
