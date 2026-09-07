@@ -1,3 +1,20 @@
+```python
+from transformers import pipeline
+import torch
+from diffusers import DiffusionPipeline
+
+# Load the image generation pipeline using diffusers
+generator = DiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4")
+generator.to("cuda")
+
+# Generate an image from the text prompt
+prompt = "A beautiful landscape with mountains and a lake"
+image = generator(prompt).images[0]
+display(image)
+
+```
+
+
 
 ## Pac Man Controll 
 https://storage.googleapis.com/tfjs-examples/webcam-transfer-learning/dist/index.html
