@@ -1,3 +1,21 @@
+
+## Pac Man Controll 
+https://storage.googleapis.com/tfjs-examples/webcam-transfer-learning/dist/index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Text To Image
 
 <img width="1104" height="736" alt="image" src="https://github.com/user-attachments/assets/d73afeba-8e05-4bea-8b11-c68b1631bfda" />
