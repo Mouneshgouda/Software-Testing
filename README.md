@@ -1,3 +1,40 @@
+📢 Announcement – ST Practical Submission
+📚 Subject: ST – Practical Record Submission
+
+Dear Students,
+
+All 11 ST experiments must be completed and prepared properly in your ST Practical Record.
+
+✅ Instructions
+Complete all 11 experiments in the practical record.
+Make sure the experiments are written neatly and in the correct order.
+Take a hard copy of the completed practical record.
+Bring the hard copy for verification and signature.
+Get the signature from me after your record has been checked.
+Make sure your record is complete before submitting it.
+📝 Submission Checklist
+ All 11 experiments completed
+ Practical record properly arranged
+ Hard copy taken
+ Record verified
+ Signature obtained
+
+⚠️ Important: Students are requested to complete all the above requirements before the submission.
+
+Please complete and submit your ST Practical Record on time.
+
+Thank you.
+
+
+
+
+
+
+
+
+
+
+
 150,119,109,143,137,94,90,97,111,122,79,116,102,138
 
 
