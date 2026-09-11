@@ -649,3 +649,10 @@ Or simply remember:
         </dependency>
 
 ```
+
+
+
+```SKCET
+https://docs.google.com/spreadsheets/d/1__uue42Gc9REZ_bCGCRJijkk95-JVQPLX5CLPanpBx4/edit?pli=1&gid=1709574454#gid=1709574454
+
+```
